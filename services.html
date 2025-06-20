@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги | CORETELL Bank</title>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+  <header class="header">
+        <a href="services.html" class="logo-link">
+          <h1>CORETELL</h1>
+        </a>
+        <nav>
+          <a href="home.html">ГЛАВНАЯ</a>
+          <a href="services.html" class="active">УСЛУГИ</a>
+          <a href="news.html">НОВОСТИ</a>
+          <a href="reviews.html">ОТЗЫВЫ</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+  <section class="services-hero">
+    <div class="services-hero-content">
+      <h2>Услуги нашего банка</h2>
+      <p>Премиальные решения для вашего финансового благополучия</p>
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <div class="categories-container">
+      <h2 class="category-title">Категории услуг</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3>Карты</h3>
+          <p>Премиальные карты с эксклюзивными привилегиями и повышенным кэшбэком</p>
+          <a href="#cards" class="category-link">Смотреть карты</a>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3>Кредиты</h3>
+          <p>Выгодные кредитные программы с индивидуальными условиями</p>
+          <a href="#credits" class="category-link">Смотреть кредиты</a>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-piggy-bank"></i>
+          </div>
+          <h3>Депозиты</h3>
+          <p>Надежные вклады с максимальной доходностью и гибкими условиями</p>
+          <a href="#deposits" class="category-link">Смотреть депозиты</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="services-container">
+    <section class="service-category" id="cards">
+      <h2 class="category-title">Карты</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3>CORETELL Black</h3>
+          <ul class="service-features">
+            <li>Кэшбэк до 15% в избранных категориях</li>
+            <li>Бесплатные переводы по всему миру</li>
+            <li>Доступ в бизнес-залы аэропортов</li>
+            <li>Персональный консьерж-сервис</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('black-card-modal')">Подробнее</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-coins"></i>
+          </div>
+          <h3>CORETELL Gold</h3>
+          <ul class="service-features">
+            <li>Кэшбэк до 10% в 2 категориях</li>
+            <li>Льготный период 120 дней</li>
+            <li>Страховка путешествий</li>
+            <li>Специальные курсы обмена</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('gold-card-modal')">Подробнее</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3>CORETELL Platinum</h3>
+          <ul class="service-features">
+            <li>Кэшбэк 5% на все покупки</li>
+            <li>Персональный менеджер 24/7</li>
+            <li>Привилегии в отелях и ресторанах</li>
+            <li>Бесплатное обслуживание</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('platinum-card-modal')">Подробнее</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-category" id="credits">
+      <h2 class="category-title">Кредиты</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Ипотека</h3>
+          <ul class="service-features">
+            <li>Ставки от 4.5% годовых</li>
+            <li>Кредит до 100 млн рублей</li>
+            <li>Без подтверждения доходов</li>
+            <li>Рассмотрение за 1 день</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('mortgage-modal')">Подробнее</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Автокредит</h3>
+          <ul class="service-features">
+            <li>Ставка от 3.9% на новые авто</li>
+            <li>Первоначальный взнос от 10%</li>
+            <li>Страхование включено</li>
+            <li>Одобрение за 1 час</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('auto-credit-modal')">Подробнее</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h3>Бизнес-кредит</h3>
+          <ul class="service-features">
+            <li>Кредитная линия до 500 млн</li>
+            <li>Отсрочка платежа до 6 месяцев</li>
+            <li>Индивидуальные условия</li>
+            <li>Консультация финансового эксперта</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('business-credit-modal')">Подробнее</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-category" id="deposits">
+      <h2 class="category-title">Депозиты</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-piggy-bank"></i>
+          </div>
+          <h3>Накопительный</h3>
+          <ul class="service-features">
+            <li>До 8.5% годовых</li>
+            <li>Пополнение и частичное снятие</li>
+            <li>Капитализация процентов</li>
+            <li>Срок от 3 месяцев</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('savings-modal')">Подробнее</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Срочный VIP</h3>
+          <ul class="service-features">
+            <li>До 9.2% годовых</li>
+            <li>Минимальная сумма 5 млн рублей</li>
+            <li>Индивидуальные условия</li>
+            <li>Личный менеджер</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('vip-deposit-modal')">Подробнее</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Мультивалютный</h3>
+          <ul class="service-features" style="color: var(--text-light);">
+            <li>5 валют на выбор</li>
+            <li>Конвертация по спецкурсу</li>
+            <li>Управление через мобильное приложение</li>
+            <li>Доступ к средствам в любой стране</li>
+          </ul>
+          <button class="service-btn" onclick="openModal('multi-currency-modal')">Подробнее</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-one">
+        <div class="footer-logo">CORETELL</div>
+        <div class="footer-contacts">
+          <p>Контакт: +8 800 55 35 35</p>
+          <p>Почта: necoretell@gmail.com</p>
+        </div>
+        <div class="footer-slogan">
+          <p>Банк будущего уже сегодня.</p>
+          <p>С нами — безопасно, удобно и быстро.</p>
+        </div>
+      </div>
+      
+      <form class="footer-form" onsubmit="event.preventDefault(); alert('Вопрос отправлен!');">
+        <div class="feedback-title">Обратная связь</div>
+        <input type="tel" class="feedback-input" placeholder="Ваш номер телефона" required><br>
+        <input type="text" class="feedback-input" placeholder="Ваш вопрос" required>
+        <button type="submit" class="feedback-submit">Отправить</button>
+      </form>
+      
+      <div class="footer-bottom">
+        2025 © Все права защищены
+      </div>
+    </div>
+  </footer>
+
+  <div id="black-card-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('black-card-modal')">&times;</button>
+      <h2 class="modal-title">CORETELL Black</h2>
+      <div class="form-group">
+        <p>Премиальная карта для самых требовательных клиентов. Доступ к эксклюзивным предложениям по всему миру.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>Кэшбэк 15% на авиабилеты и отели</li>
+          <li>Бесплатные переводы в любой валюте</li>
+          <li>Доступ в 1000+ бизнес-залов</li>
+          <li>Персональный консьерж-сервис 24/7</li>
+          <li>Страхование путешествий до $500,000</li>
+        </ul>
+      </div>
+      <form id="black-card-form" onsubmit="event.preventDefault(); submitForm('black-card-form');">
+        <div class="form-group">
+          <label for="black-name">ФИО</label>
+          <input type="text" id="black-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="black-phone">Телефон</label>
+          <input type="tel" id="black-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Оформить карту</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="gold-card-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('gold-card-modal')">&times;</button>
+      <h2 class="modal-title">CORETELL Gold</h2>
+      <div class="form-group">
+        <p>Золотая карта с премиальными привилегиями и выгодными условиями для путешественников.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>Кэшбэк 10% на авиабилеты и отели</li>
+          <li>Льготный период 120 дней</li>
+          <li>Бесплатное страхование путешествий</li>
+          <li>Специальные курсы обмена валют</li>
+          <li>Доступ в бизнес-залы 2 раза в месяц</li>
+        </ul>
+      </div>
+      <form id="gold-card-form" onsubmit="event.preventDefault(); submitForm('gold-card-form');">
+        <div class="form-group">
+          <label for="gold-name">ФИО</label>
+          <input type="text" id="gold-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="gold-phone">Телефон</label>
+          <input type="tel" id="gold-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Оформить карту</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="platinum-card-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('platinum-card-modal')">&times;</button>
+      <h2 class="modal-title">CORETELL Platinum</h2>
+      <div class="form-group">
+        <p>Платиновая карта с универсальными преимуществами для повседневного использования.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>Кэшбэк 5% на все покупки</li>
+          <li>Персональный менеджер 24/7</li>
+          <li>Скидки в ресторанах и отелях</li>
+          <li>Бесплатное обслуживание</li>
+          <li>Приоритетное обслуживание</li>
+        </ul>
+      </div>
+      <form id="platinum-card-form" onsubmit="event.preventDefault(); submitForm('platinum-card-form');">
+        <div class="form-group">
+          <label for="platinum-name">ФИО</label>
+          <input type="text" id="platinum-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="platinum-phone">Телефон</label>
+          <input type="tel" id="platinum-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Оформить карту</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="mortgage-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('mortgage-modal')">&times;</button>
+      <h2 class="modal-title">Ипотека</h2>
+      <div class="form-group">
+        <p>Эксклюзивные условия по ипотеке для клиентов CORETELL. Минимальные ставки, максимальный комфорт.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>Ставка от 4.5% на новостройки</li>
+          <li>Кредит до 100 млн рублей</li>
+          <li>Первоначальный взнос от 15%</li>
+          <li>Срок кредита до 30 лет</li>
+          <li>Без подтверждения доходов</li>
+        </ul>
+      </div>
+      <form id="mortgage-form" onsubmit="event.preventDefault(); submitForm('mortgage-form');">
+        <div class="form-group">
+          <label for="mortgage-name">ФИО</label>
+          <input type="text" id="mortgage-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="mortgage-phone">Телефон</label>
+          <input type="tel" id="mortgage-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="mortgage-amount">Желаемая сумма (руб)</label>
+          <input type="number" id="mortgage-amount" class="form-control" placeholder="5000000" min="1" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Оставить заявку</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="auto-credit-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('auto-credit-modal')">&times;</button>
+      <h2 class="modal-title">Автокредит</h2>
+      <div class="form-group">
+        <p>Специальные программы кредитования на новые и подержанные автомобили.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>Ставка от 3.9% на новые авто</li>
+          <li>Первоначальный взнос от 10%</li>
+          <li>Страхование КАСКО включено</li>
+          <li>Одобрение за 1 час</li>
+          <li>Срок кредита до 7 лет</li>
+        </ul>
+      </div>
+      <form id="auto-credit-form" onsubmit="event.preventDefault(); submitForm('auto-credit-form');">
+        <div class="form-group">
+          <label for="auto-name">ФИО</label>
+          <input type="text" id="auto-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="auto-phone">Телефон</label>
+          <input type="tel" id="auto-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="auto-model">Модель автомобиля</label>
+          <input type="text" id="auto-model" class="form-control" placeholder="Например: Toyota Camry" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Оставить заявку</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="business-credit-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('business-credit-modal')">&times;</button>
+      <h2 class="modal-title">Бизнес-кредит</h2>
+      <div class="form-group">
+        <p>Гибкие кредитные решения для развития вашего бизнеса с индивидуальными условиями.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>Кредитная линия до 500 млн рублей</li>
+          <li>Отсрочка платежа до 6 месяцев</li>
+          <li>Индивидуальные условия</li>
+          <li>Консультация финансового эксперта</li>
+          <li>Быстрое рассмотрение заявки</li>
+        </ul>
+      </div>
+      <form id="business-credit-form" onsubmit="event.preventDefault(); submitForm('business-credit-form');">
+        <div class="form-group">
+          <label for="business-name">ФИО</label>
+          <input type="text" id="business-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="business-phone">Телефон</label>
+          <input type="tel" id="business-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="business-company">Название компании</label>
+          <input type="text" id="business-company" class="form-control" placeholder="ООО 'Ромашка'" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Оставить заявку</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальные окна для депозитов -->
+  <div id="savings-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('savings-modal')">&times;</button>
+      <h2 class="modal-title">Накопительный вклад</h2>
+      <div class="form-group">
+        <p>Гибкие условия для накопления с возможностью пополнения и частичного снятия.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>До 8.5% годовых в рублях</li>
+          <li>Пополнение и частичное снятие</li>
+          <li>Капитализация процентов</li>
+          <li>Срок от 3 месяцев</li>
+          <li>Минимальная сумма 50,000 руб</li>
+        </ul>
+      </div>
+      <form id="savings-form" onsubmit="event.preventDefault(); submitForm('savings-form');">
+        <div class="form-group">
+          <label for="savings-name">ФИО</label>
+          <input type="text" id="savings-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="savings-phone">Телефон</label>
+          <input type="tel" id="savings-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="savings-amount">Сумма вклада (руб)</label>
+          <input type="number" id="savings-amount" class="form-control" placeholder="100000" min="50000" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Открыть вклад</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="vip-deposit-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('vip-deposit-modal')">&times;</button>
+      <h2 class="modal-title">Срочный VIP депозит</h2>
+      <div class="form-group">
+        <p>Премиальная программа сбережений с максимальной доходностью и индивидуальным обслуживанием.</p>
+        <ul class="service-features" style="margin: 20px 0;">
+          <li>До 9.2% годовых в рублях</li>
+          <li>Минимальная сумма 5 млн рублей</li>
+          <li>Возможность досрочного снятия</li>
+          <li>Личный менеджер</li>
+          <li>Индивидуальный график выплат</li>
+        </ul>
+      </div>
+      <form id="vip-deposit-form" onsubmit="event.preventDefault(); submitForm('vip-deposit-form');">
+        <div class="form-group">
+          <label for="vip-name">ФИО</label>
+          <input type="text" id="vip-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="vip-phone">Телефон</label>
+          <input type="tel" id="vip-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="vip-amount">Сумма вклада (руб)</label>
+          <input type="number" id="vip-amount" class="form-control" placeholder="5000000" min="500000" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Открыть вклад</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="multi-currency-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('multi-currency-modal')">&times;</button>
+      <h2 class="modal-title">Мультивалютный вклад</h2>
+      <div class="form-group">
+        <p>Уникальная возможность диверсифицировать свои сбережения в разных валютах.</p>
+        <ul class="service-features" style="margin: 20px 0; color: var(--text-light);">
+          <li>5 валют на выбор (USD, EUR, GBP, CHF, CNY)</li>
+          <li>Конвертация по специальному курсу</li>
+          <li>Управление через мобильное приложение</li>
+          <li>Доступ к средствам в любой стране</li>
+          <li>Круглосуточная поддержка</li>
+        </ul>
+      </div>
+      <form id="multi-currency-form" onsubmit="event.preventDefault(); submitForm('multi-currency-form');">
+        <div class="form-group">
+          <label for="currency-name">ФИО</label>
+          <input type="text" id="currency-name" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+          <label for="currency-phone">Телефон</label>
+          <input type="tel" id="currency-phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="currency-type">Предпочитаемая валюта</label>
+          <select id="currency-type" class="form-control" required>
+            <option value="">Выберите валюту</option>
+            <option value="USD">Доллар США (USD)</option>
+            <option value="EUR">Евро (EUR)</option>
+            <option value="GBP">Фунт стерлингов (GBP)</option>
+            <option value="CHF">Швейцарский франк (CHF)</option>
+            <option value="CNY">Китайский юань (CNY)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="currency-amount">Сумма вклада</label>
+          <input type="number" id="currency-amount" class="form-control" placeholder="1000" min="1" required>
+        </div>
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Открыть вклад</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="script1.js"></script>
+</body>
+</html>

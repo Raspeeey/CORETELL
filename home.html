@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CORETELL Bank</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header class="header">
+        <a href="home.html" class="logo-link">
+          <h1>CORETELL</h1>
+        </a>
+        <nav>
+          <a href="home.html" class="active">ГЛАВНАЯ</a>
+          <a href="services.html">УСЛУГИ</a>
+          <a href="news.html">НОВОСТИ</a>
+          <a href="reviews.html">ОТЗЫВЫ</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+  <section class="hero" id="home">
+    <video autoplay muted loop playsinline>
+      <source src="bank1.mp4" type="video/mp4">
+    </video>
+    <div class="fade-overlay"></div>
+    <div class="hero-content">
+      <h2>Банковские карты будущего</h2>
+      <p>3 минуты на оформление — 3 года привилегий.</p>
+      <button id="openModalBtn">Оформить карту</button>
+    </div>
+  </section>
+
+  <div id="modalStep1" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+        <h2 class="modal-title">Выберите вашу карту</h2>
+        
+        <div class="progress-steps">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+        </div>
+        
+        <div class="cards-container">
+            <div class="card-option" data-card="debit">
+                <img src="card1.png" alt="CORETELL Black" class="card-image">
+                <h3 class="card-name">CORETELL Black</h3>
+                <p class="card-description">Премиальная дебетовая карта с максимальными привилегиями</p>
+                <ul class="card-features">
+                    <li>Кэшбэк до 5%</li>
+                    <li>Бесплатные переводы</li>
+                    <li>Страховка путешествий</li>
+                </ul>
+            </div>
+            
+            <div class="card-option" data-card="credit">
+                <img src="card2.png" alt="CORETELL Gold" class="card-image">
+                <h3 class="card-name">CORETELL Gold</h3>
+                <p class="card-description">Кредитная карта с льготным периодом до 120 дней</p>
+                <ul class="card-features">
+                    <li>Льготный период 120 дней</li>
+                    <li>Кредитный лимит до 1 000 000 ₽</li>
+                    <li>Бесплатное обслуживание</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="btn-nav">
+            <button class="btn btn-secondary" id="closeModalBtn2">Отмена</button>
+            <button class="btn btn-primary" id="nextStep1">Далее</button>
+        </div>
+    </div>
+</div>
+
+<div id="modalStep2" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn2">&times;</button>
+        <h2 class="modal-title">Ваши данные</h2>
+        
+        <div class="progress-steps">
+            <div class="progress-step">1</div>
+            <div class="progress-step active">2</div>
+            <div class="progress-step">3</div>
+        </div>
+        
+        <form id="userDataForm">
+            <div class="form-group">
+                <label for="fullname">ФИО</label>
+                <input type="text" id="fullname" class="form-control" placeholder="Иванов Иван Иванович" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="ваш@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthdate">Дата рождения</label>
+                <input type="date" id="birthdate" class="form-control" required>
+            </div>
+        </form>
+        
+        <div class="btn-nav">
+            <button class="btn btn-secondary" id="prevStep2">Назад</button>
+            <button class="btn btn-primary" id="nextStep2">Далее</button>
+        </div>
+    </div>
+</div>
+
+<div id="modalStep3" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn3">&times;</button>
+        <h2 class="modal-title">Подтверждение заявки</h2>
+        
+        <div class="progress-steps">
+            <div class="progress-step">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step active">3</div>
+        </div>
+        
+        <div class="confirmation-card">
+            <div class="card-success-icon">✓</div>
+            <h3>Ваша заявка принята!</h3>
+            <p>Мы уже начали оформление вашей карты</p>
+                
+            <p>Полная информация отправлена на ваш email</p>
+        </div>
+        
+        <div class="btn-nav">
+            <button class="btn btn-secondary" id="prevStep3">Назад</button>
+            <button class="btn btn-primary" id="finishProcess">Завершить</button>
+        </div>
+    </div>
+</div>
+
+  <section class="intro">
+    <h2>CORETELL ДЛЯ БИЗНЕСА И ЭЛИТНЫХ КЛИЕНТОВ</h2>
+    <p>Финансовая инфраструктура нового поколения для тех, кто требует большего<a href="#" class="btnread" id="readMoreBtn">> читать больше</a></p>
+  </section>
+
+  <section class="hero-section">
+    <div class="hero-text">
+      <div class="shadowtext"></div>
+      <h2>БОЛЬШИЕ ВОЗМОЖНОСТИ</h2>
+      <p>Платежи, подписки, переводы, помощь – всё работает стабильно и быстро, где угодно.</p>
+    </div>
+  </section>
+
+  <div class="text1">
+    <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+    <h4>Мы предлагаем инновационные решения для вашего финансового благополучия</h4>
+  </div>
+  <section class="features">
+    <div class="container">
+        <div class="features-container">
+            <div class="feature">
+                <i class="fas fa-file-signature"></i>
+                <h3>Минимум документов</h3>
+                <p>Быстрое оформление всех банковских продуктов с минимальным набором документов</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>Персональный менеджер</h3>
+                <p>Круглосуточная поддержка вашего персонального менеджера</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-percentage"></i>
+                <h3>Кэшбэк и бонусы</h3>
+                <p>Возврат до 10% за покупки по нашей премиальной карте</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-sliders-h"></i>
+                <h3>Настройка карты</h3>
+                <p>Гибкие лимиты и тарифы, которые вы можете настроить под себя</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Безопасность</h3>
+                <p>Многоуровневая защита всех ваших транзакций</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-users"></i>
+                <h3>Семейные счета</h3>
+                <p>Специальные привилегии для всех членов вашей семьи</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news">
+  <div class="container-news">
+      <h2>Последние новости</h2>
+      <div class="news-card">
+          <div class="news-image"></div>
+          <div class="news-content">
+              <span class="news-date">15 июня 2025</span>
+              <h3>Новая премиальная карта с повышенным кэшбэком</h3>
+              <p>С 1 июля 2025 года мы запускаем новую премиальную карту CORETELL Platinum с кэшбэком до 15% в избранных категориях. Успейте оформить в числе первых!</p>
+              <a href="news.html" class="btnnews">Читать все новости</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="subscribe">
+  <div class="container-sub">
+      <h2>Подпишитесь на наши новости</h2>
+      <p>Получайте актуальные обновления о новых услугах, акциях и специальных предложениях</p>
+      
+      <form class="subscribe-form">
+          <input type="email" placeholder="Ваш Email" required>
+          <button type="submit" class="btnsub">Подписаться</button>
+      </form>
+      
+      <p class="subscribe-note">Отписаться можно в любой момент</p>
+  </div>
+</section>
+
+  </section>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-one">
+            <div class="footer-logo">CORETELL</div>
+            <div class="footer-contacts">
+                <p>Контакт: +8 800 55 35 35</p>
+                <p>Почта: necoretell@gmail.com</p>
+            </div>
+            <div class="footer-slogan">
+                <p>Банк будущего уже сегодня.</p>
+                <p>С нами — безопасно, удобно и быстро.</p>
+            </div>
+        </div>
+        
+        <form class="footer-form" id="footerForm">
+            <div class="feedback-title">Обратная связь</div>
+            <input type="tel" class="feedback-input" id="footerPhone" placeholder="Ваш номер телефона" required>
+            <input type="text" class="feedback-input" id="footerQuestion" placeholder="Ваш вопрос" required>
+            <button type="submit" class="feedback-submit">Отправить</button>
+        </form>
+        
+        <div class="footer-bottom">
+            2025 © Все права защищены
+        </div>
+    </div>
+</footer>
+
+  
+  <img src="arrow.png" class="scroll-top" id="scrollTopBtn" alt="наверх">
+
+  <div id="aboutBankModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeAboutBankBtn">&times;</button>
+        <h2 class="modal-title">О банке CORETELL</h2>
+        
+        <div class="bank-info">
+            <div class="bank-logo">CORETELL</div>
+            <p class="bank-description">Мы - новый цифровой банк, созданный для тех, кто ценит инновации и персонализированный подход.</p>
+            
+            <div class="bank-features">
+                <div class="feature-item">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Основан в 2023 году</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Персональный подход к каждому клиенту</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Передовые технологии безопасности</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Инновационные финансовые решения</span>
+                </div>
+            </div>
+            
+            <p class="bank-mission">Наша миссия - сделать банковские услуги простыми, удобными и доступными без компромиссов в качестве.</p>
+        </div>
+        
+        <div class="btn-nav">
+            <button class="btn btn-primary" id="closeAboutBankBtn2">Закрыть</button>
+        </div>
+    </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

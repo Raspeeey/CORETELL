@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы | CORETELL Bank</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+  <header class="header">
+    <a href="reviews.html" class="logo-link">
+      <h1>CORETELL</h1>
+    </a>
+    <nav>
+      <a href="home.html">ГЛАВНАЯ</a>
+      <a href="services.html">УСЛУГИ</a>
+      <a href="news.html">НОВОСТИ</a>
+      <a href="reviews.html" class="active" >ОТЗЫВЫ</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="moderation-notice" id="moderationNotice">
+    <i class="fas fa-check-circle"></i> Ваш отзыв отправлен на модерацию!
+  </div>
+
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide slide-1"></div>
+      <div class="slide slide-2"></div>
+      <div class="slide slide-3"></div>
+    </div>
+    
+    <div class="slider-overlay">
+      <h1>Отзывы наших клиентов</h1>
+      <p>Нам доверяют тысячи клиентов. Вот что они говорят о нас.</p>
+    </div>
+    
+    <div class="slider-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></div>
+    
+    <div class="slider-nav" id="sliderNav">
+      <div class="slider-dot active" data-index="0"></div>
+      <div class="slider-dot" data-index="1"></div>
+      <div class="slider-dot" data-index="2"></div>
+    </div>
+  </div>
+
+  <div class="reviews-container">
+    <div class="reviews-grid" id="reviewsGrid">
+    </div>
+
+    <a href="#" class="add-review-btn" id="addReviewBtn">Оставить отзыв</a>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-one">
+        <div class="footer-logo">CORETELL</div>
+        <div class="footer-contacts">
+          <p>Контакт: +8 800 55 35 35</p>
+          <p>Почта: necoretell@gmail.com</p>
+        </div>
+        <div class="footer-slogan">
+          <p>Банк будущего уже сегодня.</p>
+          <p>С нами — безопасно, удобно и быстро.</p>
+        </div>
+      </div>
+      
+      <form class="footer-form" onsubmit="event.preventDefault(); alert('Вопрос отправлен!');">
+        <div class="feedback-title">Обратная связь</div>
+        <input type="tel" class="feedback-input" placeholder="Ваш номер телефона" required><br>
+        <input type="text" class="feedback-input" placeholder="Ваш вопрос" required>
+        <button type="submit" class="feedback-submit">Отправить</button>
+      </form>
+      
+      <div class="footer-bottom">
+        2025 © Все права защищены
+      </div>
+    </div>
+  </footer>
+
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeReviewModal">&times;</button>
+      <h2 class="modal-title">Оставить отзыв</h2>
+      
+      <form id="reviewForm">
+        <div class="form-group">
+          <label for="reviewName">Ваше имя</label>
+          <input type="text" id="reviewName" class="form-control" placeholder="Как к вам обращаться?" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="reviewEmail">Email (по желанию)</label>
+          <input type="email" id="reviewEmail" class="form-control" placeholder="Ваш email">
+        </div>
+        
+        <div class="form-group">
+          <label for="reviewText">Ваш отзыв</label>
+          <textarea id="reviewText" class="form-control" rows="5" placeholder="Поделитесь вашим опытом" required></textarea>
+        </div>
+        
+        <div class="rating-container">
+          <span class="rating-star" data-rating="1"><i class="far fa-star"></i></span>
+          <span class="rating-star" data-rating="2"><i class="far fa-star"></i></span>
+          <span class="rating-star" data-rating="3"><i class="far fa-star"></i></span>
+          <span class="rating-star" data-rating="4"><i class="far fa-star"></i></span>
+          <span class="rating-star" data-rating="5"><i class="far fa-star"></i></span>
+        </div>
+        <input type="hidden" id="reviewRating" value="0">
+        
+        <div class="btn-nav">
+          <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="script3.js"></script>
+</body>
+</html>
